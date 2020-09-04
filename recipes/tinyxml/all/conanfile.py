@@ -42,7 +42,7 @@ class TinyXmlConan(ConanFile):
         if self._cmake:
             return self._cmake
         self._cmake = CMake(self)
-        self._cmake.definitions["TINYXML_WITH_STL"] = self.options.with_stl
+        self._cmake.definitions["TIXML_USE_STL"] = self.options.with_stl
         self._cmake.configure(build_folder=self._build_subfolder)
         return self._cmake
 
